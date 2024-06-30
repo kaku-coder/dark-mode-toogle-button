@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,dody{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+}
+input{
+    visibility: hidden;
+}
+label{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.circle{
+    position: relative;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: 34px;
+    background-color: rgba(255, 0, 0, 0.282);
+    height: 34px;
+    border-radius: 50%;
+    animation: toogleof .4s linear forwards;
+}
+.input:checked + .lable{
+    background-color: white;
+}
+.input:checked+ .lable .circle{
+    animation: toogleon .4s linear forwards;
+
+}
+@keyframes toogleon{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform:translate(40px);
+    }
+}
+@keyframes toogleof{
+    0%{
+        transform: translate(40px);
+    }
+    100%{
+        transform:translate(0);
+    }
+}
